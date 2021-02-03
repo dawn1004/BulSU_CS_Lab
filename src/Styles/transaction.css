@@ -1,0 +1,111 @@
+.heading-apparatus p{
+    color: rgb(241, 238, 238);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 9px;
+}
+
+.mybtn-green{
+    background: #87c232;
+    color: white;
+}
+
+.add-trans-modal-bg{
+    background: rgba(0, 0, 0, 0.281);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    animation: slideRight 0.4s ease-in-out forwards;
+}
+
+.add-trans-modal{
+    padding: 0px 200px;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.return-barrowed-dialog{
+    background: rgba(0, 0, 0, 0.281);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    animation: slideRight 0.4s ease-in-out forwards;
+}
+.return-barrowed-card{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px 100px;
+}
+
+.return-barrowed-card table{
+    background-color: #F8F0F0;
+}
+
+.chemicals-textfield-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+
+}
+.list-chemss{
+    margin-right: 20px;
+    width: fit-content;
+}
+
+.chems-textfield{
+    width: 70px;
+    margin-left: 5px;
+
+}
+
+.backarrow{
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    width: 30px;
+    cursor: pointer;
+}
+.returnee-info{
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+    background: #F8F0F0;
+    padding: 10px 15px;
+}
+.returnee-info span{
+    font-weight: bolder;
+    color: rgb(47, 47, 47);
+
+}
+
+
+.back-return-barrowed-dialog{
+    fill: #585858;
+}
+
+
+.back-return-barrowed-dialog:hover{
+    fill: #000000;
+}
+
+.view-icon{
+    fill: #28a745;
+}
+.view-icon:hover{
+    fill: green;
+}

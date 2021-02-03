@@ -1,0 +1,43 @@
+.modal-add-chemical-bg{
+    background: rgba(0, 0, 0, 0.281);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    animation: slideDown 0.3s ease-in-out forwards;
+}
+.modal-edit-chemicals-bg{
+    background: rgba(0, 0, 0, 0.281);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    animation: slideDown 0.3s ease-in-out forwards;
+
+}
+
+.delete-chemical-confirmation{
+    background: rgb(255, 255, 255);
+    width: 300px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.add-chemical-modal{
+    width: 400px;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}

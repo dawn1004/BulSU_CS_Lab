@@ -1,0 +1,10 @@
+.settings-body{
+    padding: 40px 120px;
+}
+.eye{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

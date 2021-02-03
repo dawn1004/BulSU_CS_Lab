@@ -1,0 +1,70 @@
+{
+  "name": "lab4",
+  "productName": "lab4",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build": "electron-packager . laboratory --icon=./icon.ico"
+  },
+  "keywords": [],
+  "author": {
+    "name": "dawn bugay",
+    "email": "dawn.bugay@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "lab4"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "electron-alert": "^0.1.11",
+    "electron-packager": "^15.1.0",
+    "electron-pdf-viewer": "^1.0.1",
+    "electron-reloader": "^1.0.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.5.1",
+    "json-server": "^0.16.2",
+    "jspdf": "^2.3.0",
+    "jspdf-autotable": "^3.5.13",
+    "path": "^0.12.7",
+    "tcp-port-used": "^1.0.2"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.53",
+    "@electron-forge/maker-deb": "^6.0.0-beta.53",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.53",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.53",
+    "@electron-forge/maker-zip": "^6.0.0-beta.53",
+    "electron": "10.1.5"
+  }
+}

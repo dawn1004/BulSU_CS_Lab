@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CS Labaratory</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/apparatus.css">
+    <link rel="stylesheet" href="../bootstrap-4.5.3-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../styles/chemical.css">
+    <link rel="stylesheet" href="../styles/transaction.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/TransHistory.css">
+    <link rel="stylesheet" href="../styles/reports.css">
+    <link rel="stylesheet" href="../styles/settings.css">
+  </head>
+  <body>
+
+    <div class="drawer-nav ">
+      <ul class="nav-links">
+        <li> <img class="icons" src="../assets/icons/home.svg" alt=""> HOME</li>
+        <li> <img class="icons" src="../assets/icons/transaction.svg" alt=""> TRANSACTION</li>
+        <li> <img class="icons" src="../assets/icons/apparatus.svg" alt=""> APPARATUS</li>
+        <li> <img class="icons" src="../assets/icons/chemicals.svg" alt=""> CHEMICALS</li>
+        <li> <img class="icons" src="../assets/icons/addingStock.svg" alt=""> ADDING STOCK HISTORY</li>
+        <li> <img class="icons" src="../assets/icons/tansHistory.svg" alt=""> TRANSACTION HISTORY</li>
+        <li> <img class="icons" src="../assets/icons/reports.svg" alt=""> CRITICAL ITEMS</li>
+        <li> <img class="icons" src="../assets/icons/reports.svg" alt=""> DUE TRANSACTIONS</li>
+        <li> <img class="icons" src="../assets/icons/reports.svg" alt=""> REPORTS</li>
+        <li> <img class="icons" src="../assets/icons/reports.svg" alt=""> SETTINGS</li>
+        <li> <img class="icons" src="../assets/icons/reports.svg" alt=""> LOGOUT</li>
+      </ul>
+    </div>
+
+<!-- ############## Home Start#################### -->
+
+    <section id="home">
+      <div class="heading-apparatus shadow">
+        <h3>Home</h3>
+      </div>
+
+      <div class="card bulsu-card shadow border-0">
+
+        <div class="heading-bulsu">
+          <img class="card-img-top home-logos" src="../assets/bulsu-logo.jpg" >
+          <div class="title-home">
+            <h5>Colllege of science Laboratory and Inventory</h5>
+            <p>Bulacan State University </p>
+          </div>
+          <img class="card-img-top home-logos" src="../assets/cs.png" >
+        </div>
+
+
+        <div class="card-body mt-4">
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner ">
+              <div class="carousel-item caro-1 active fade-carousel">
+
+                  <h5 class="card-title">Vision of BulSU</h5>
+                  <p class="card-text">Bulacan State University is a progressive knowledge-generating institution globally recognized for excellent instruction, pioneering research, and responsive community engagements </p>
+                
+                  <h5 class="card-title mt-5">Mission of BulSU</h5>
+                  <p class="card-text">
+                  Bulacan State University exists to produce highly competent, ethical and service-oriented professionals that contribute to the sustainable socio-economic growth and development of the nation 
+                  </p>
+
+              </div>
+              <div class="carousel-item caro-2 fade-carousel">
+
+                <h5 class="card-title">History of College of Science</h5>
+                <p class="card-text justify-text">
+                  &nbsp &nbsp The College of Science evolved from the College of Arts and Science (CAS), which offered the course Bachelor of Science in Mathematics major in Computer Science in 1998, followed by Bachelor of Science in Biology in 1999.
+                  <br> &nbsp &nbsp In March 2005, the College of Arts and Science was separated into various independent entities, one of which was the Institute of Science (IS). In June 2008, the Institute added two more fields of specialization under the BS Mathematics program namely: Business Applications and Applied Statistics.
+                  <br>&nbsp &nbsp  By virtue of BOR #66, series of 2008, the Board of Regents, during their 4th Regular meeting on December 2, 2008 approved the conversion of the Institute of Science into the College of Science.
+                  In 2013, two new courses namely BS Environmental Science and BS Food Science (now BS Food Technology) were offered.
+                </p>
+              
+
+              </div>
+              <div class="carousel-item caro-3 fade-carousel">
+
+                <h5 class="card-title">Vision of College of Science</h5>
+                <p class="card-text">  &nbsp &nbsp The College of Science aspires to be recognized as a center of excellence for learning where human talents and skills are honed to their fullest potentials in an environment that promotes highest academic standards and cultural values. </p>
+              
+                <h5 class="card-title mt-5">Mission of College of Science</h5>
+                <p class="card-text">
+                  &nbsp &nbsp The College of Science will devote its human and material resources to improve knowledge, develop skills, cultivate values, conduct research studies, and facilitate extension promotive of the goals of nation-building and lofty human aspirations in the fields of sciences and mathematics. 
+                </p>
+
+              </div>
+            </div>
+            
+
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+<!-- ############## Home End#################### -->
+
+
+<!-- ############## Transaction Start#################### -->
+
+    <section id="transaction">
+      <nav class="heading-apparatus">
+        <p class="ml-5">TRANSACTION</p>
+        <button class="btn mybtn-green mr-5" onclick="openBarrowModal()">Borrow</button>
+      </nav>
+
+      <table class="table ml-4 mt-4" style="width: 800px;">
+        <thead class="tb-bg rounded text-white">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Student No.</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Date Borrowed</th>
+            <th scope="col">Return Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-transactions">
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <td>Loading Records..</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="button-cover">
+        <div class="pageButtons"> 
+          <span onclick="transPrev()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            Back
+          </span>
+          <p class="trans_pageNumber">0</p>
+          <span onclick="transNext()">
+            Next<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </span>
+        </div>
+      </div>
+
+
+      <div class="add-trans-modal-bg">
+        <div class="add-trans-modal">
+          <img onclick="closeBorrowModal()" 
+          class="backarrow" 
+          src="../assets/icons/back.svg" 
+          alt="">
+          <h3 class="ml-4 mt-3 mb-4">Borrow Form</h3>
+
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Student No.</label>
+            <div class="col-sm-7">
+              <input type="text" 
+              id="formstudentNo"
+              class="form-control" placeholder="2020101211">
+            </div>
+            
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Student Name</label>
+            <div class="col-sm-7">
+              <input type="text" 
+              id="formstudentName"
+              class="form-control" placeholder="Juan Dela Cruz">
+            </div>
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Subject</label>
+            <div class="col-sm-7">
+              <input type="text" 
+              id="formSubject"
+              class="form-control" placeholder="Chemistry">
+            </div>
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Section</label>
+            <div class="col-sm-7">
+              <input type="text" 
+              id="formSection"
+              class="form-control" 
+              placeholder="BSIT-4CG1">
+            </div>
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Instructor</label>
+            <div class="col-sm-7">
+              <input type="text" 
+              id="formProfName"
+              class="form-control" placeholder="Cecilia gascon">
+            </div>
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Return Date</label>
+            <div class="col-sm-7">
+              <input type="date" 
+              id="formReturnDate"
+              class="form-control">
+            </div>
+          </div>
+
+          <!-- liiist -->
+          <h5 class="ml-4 mt-4 mb-3">Apparatus</h5>
+          <div class="apparatus-textfield-container">
+            <!-- the list is on js -->
+          </div>
+          <h5 class="ml-4 mt-4 mb-3">Chemicals</h5>
+          <div class="chemicals-textfield-container">
+            <!-- the list is on js -->
+          </div>
+
+          <button 
+          class="btn btn-danger ml-4 mt-3 mb-5"
+          onclick="closeBorrowModal()"
+          >Cancel</button> 
+
+          <button
+          onclick="saveTransaction()"
+          class="btn btn-success ml-2 mt-3 mb-5"
+          >Save</button>
+        </div>
+      </div>
+
+      <!-- return dialog -->
+     <div class="return-barrowed-dialog">
+      <div class="card return-barrowed-card">
+        
+        <h4>
+          <svg onclick="hideReturnDialog()" class="back-return-barrowed-dialog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="50px" height="50px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z"/></svg>  
+          TRANSACTION NO: # <span class="trans-num"></span>
+        </h4>
+
+        <div class="return-barrowed-info"></div>
+        <h4>Apparatus List</h4>
+
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Item Name</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Damage</th>
+            </tr>
+          </thead>
+          <tbody class="table-return-item">
+            <tr>
+              <td></td>
+              <td>No Apparatus borrowed</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="buttons">
+          <buttn 
+          onclick="returnTransaction()"
+          class="btn btn-primary" style="width: 100px;">Return</buttn>
+          <buttn 
+          onclick="hideReturnDialog()"
+          class="btn btn-danger" style="width: 100px;">Cancel</buttn>
+        </div>
+
+      </div>
+     </div>
+
+    </section>
+<!-- ############## Transaction End#################### -->
+
+
+
+
+<!-- ##############APPARATUS Start#################### -->
+    <section id="apparatus">
+      <div class="heading-apparatus shadow">
+
+        <h3>Apparatus</h3>
+        
+        <div class="search-apparatus">
+          <input type="text" 
+          class="appa-input-search form-control shadow-sm"
+          style="width: 300px;"
+          placeholder="Search Item"
+          >
+          <button 
+          onclick="openAddApparatusModal()"
+          class="btn mybtn-green">
+          Add Item</button>
+        </div>
+
+
+      </div>
+
+      
+
+      <table class="table ml-4 mt-2" style="width: 800px;">
+        <thead class="tb-bg rounded text-white">
+          <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Borrowed</th>
+            <th scope="col">Damage</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-apparatus-item">
+          <tr>
+            <th ></th>
+            <td>Loading Records..</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="button-cover">
+        <div class="pageButtons"> 
+          <span onclick="appaPrev()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            Back
+          </span>
+          <p class="appa_pageNumber">0</p>
+          <span onclick="appaNext()">
+            Next<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </span>
+        </div>
+      </div>
+      
+
+      <div class="modal-add-apparatus-bg">
+        <div class="add-apparatus-modal">
+          <h3 class="pt-4 pl-4 pb-4">Add Apparatus</h3>
+
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Item Code</label>
+            <div class="col-sm-7">
+              <input type="text" 
+              id="formApparatusItemCode"
+              class="form-control" placeholder="AP-2012">
+            </div>
+          </div>
+
+          <div class="form-group row px-4">
+            <label  class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-9">
+              <input type="text" 
+              id="formApparatusItemName"
+              class="form-control" placeholder="Telescope">
+            </div>
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-2 col-form-label">Qty</label>
+            <div class="col-sm-5">
+              <input 
+              id="formApparatusQty"
+              type="number" class="form-control" value="1" min="1">
+            </div>
+            <div class="col-sm-4">
+
+              <select name="units" id="formApparatusMeasurement" class="form-control">
+                <option value="pcs">pcs</option>
+                <option value="kg">kg</option>
+                <option value="gm">gm</option>
+                <option value="ml">ml</option>
+              </select>
+
+            </div>
+          </div>
+
+          <p class="error-msg-appa-name">! Please complete the form</p>
+
+          <button 
+          class="btn btn-success mt-3 ml-4"
+          onclick="addApparatus()"
+          >Save Item
+          </button>
+          <button 
+          class="btn btn-danger mt-3 ml-1"
+          onclick="closeAddModalAparatus()"
+          >Cancel
+        </button>
+
+        </div>
+      </div>
+
+
+      <div class="modal-edit-apparatus-bg">
+        <div class="edit-apparatus-modal">
+          <h3 class="pt-4 pl-4 pb-4 edit-apparatus-itemName">Edit Apparatus</h3>
+
+          <div class="form-group row px-4">
+            <label  class="col-sm-2 col-form-label">Qty</label>
+            <div class="col-sm-9">
+              <input type="number" 
+              id="formEditApparatusNewQty"
+              class="form-control" placeholder="Telescope">
+            </div>
+          </div>
+          <!-- <p class="error-edit-msg-appa-name">! Please complete the form</p> -->
+          <button 
+          class="btn btn-success mt-3 ml-4"
+          onclick="saveEditApparatus()"
+          >Save Item
+          </button>
+          <button 
+          class="btn btn-danger mt-3 ml-1"
+          onclick="showDeleteAppatusConfirmation()"
+          >Delete
+          </button>
+          <button 
+          class="btn btn-light mt-3 ml-1"
+          onclick="closeEditApparatusModal()"
+          >Cancel
+          </button>
+
+        </div>
+      </div>
+
+      <div class="delete-apparatus-confirmation shadow-lg ">
+        <p>Are you sure you want to delete this item?</p>
+        <button onclick="deleteApparatus()" class="btn btn-danger">Yes</button>
+        <button onclick="hideDeleteAppatusConfirmation()"
+        class="btn btn-light">Cancel</button>
+      </div>
+      
+    </section>
+<!-- ##############APPARATUS end#################### -->
+
+
+
+<!-- ##############Chemical Start#################### -->
+    <section id="chemical">
+      <div class="heading-apparatus shadow">
+        <h3>Chemicals</h3>
+        <div class="search-apparatus">
+          <input type="text" 
+          class="chem-input-search form-control shadow-sm"
+          style="width: 300px;"
+          placeholder="Search Item"
+          >
+          <button 
+          onclick="openAddChemicalModal()"
+          class="btn mybtn-green">Add Item</button>
+        </div>
+
+      </div>
+
+
+      <table class="table ml-4 mt-2" style="width: 800px;">
+        <thead class="tb-bg rounded text-white">
+          <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Borrowed</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-chemicals-item">
+          <tr>
+            <th ></th>
+            <td>Loading Records..</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="button-cover">
+        <div class="pageButtons"> 
+          <span onclick="chemPrev()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            Back
+          </span>
+          <p class="pageNumber">0</p>
+          <span onclick="chemNext()">
+            Next<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </span>
+        </div>
+      </div>
+
+
+      
+      <div class="modal-add-chemical-bg">
+        <div class="add-chemical-modal">
+          <h3 class="pt-4 pl-4 pb-4">Add Chemical</h3>
+
+
+          <div class="form-group row px-4">
+            <label  class="col-sm-4 col-form-label">Item Code</label>
+            <div class="col-sm-7">
+              <input type="text" 
+              id="formChemicalItemCode"
+              class="form-control" placeholder="CH-2011">
+            </div>
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-9">
+              <input type="text" 
+              id="formChemicalItemName"
+              class="form-control" placeholder="H2O">
+            </div>
+          </div>
+          <div class="form-group row px-4">
+            <label  class="col-sm-2 col-form-label">Qty</label>
+            <div class="col-sm-5">
+              <input 
+              id="formChemicalQty"
+              type="number" class="form-control" value="1" min="1">
+            </div>
+            <div class="col-sm-4">
+              <!-- <input 
+              id="formChemicalMeasurement"
+              type="text" class="form-control" placeholder="pcs"> -->
+              <select name="units" id="formChemicalMeasurement" class="form-control">
+                <option value="kg">kg</option>
+                <option value="gm">gm</option>
+                <option value="ml">ml</option>
+              </select>
+            </div>
+
+          </div>
+
+          <button 
+          class="btn btn-success mt-3 ml-4"
+          onclick="addChemical()"
+          >Save Item
+          </button>
+          <button 
+          class="btn btn-danger mt-3 ml-1"
+          onclick="closeAddModalChemical()"
+          >Cancel
+        </button>
+
+        </div>
+      </div>
+
+      <div class="modal-edit-chemicals-bg">
+        <div class="edit-apparatus-modal">
+          <h3 class="pt-4 pl-4 pb-4 edit-chemical-itemName">Edit Apparatus</h3>
+
+          <div class="form-group row px-4">
+            <label  class="col-sm-2 col-form-label">Qty</label>
+            <div class="col-sm-9">
+              <input type="number" 
+              id="formEditChemicalNewQty"
+              class="form-control" placeholder="Telescope">
+            </div>
+          </div>
+          <!-- <p class="error-edit-msg-appa-name">! Please complete the form</p> -->
+          <button 
+          class="btn btn-success mt-3 ml-4"
+          onclick="saveEditChemical()"
+          >Save Item
+          </button>
+          <button 
+          class="btn btn-danger mt-3 ml-1"
+          onclick="showDeleteChemicalConfirmation()"
+          >Delete
+          </button>
+          <button 
+          class="btn btn-light mt-3 ml-1"
+          onclick="closeEditChemicalModal()"
+          >Cancel
+          </button>
+
+        </div>
+      </div>
+
+
+      <div class="delete-chemical-confirmation shadow-lg ">
+        <p>Are you sure you want to delete this item?</p>
+        <button onclick="deleteChemical()" class="btn btn-danger">Yes</button>
+        <button onclick="hideDeleteChemicalConfirmation()"
+        class="btn btn-light">Cancel</button>
+      </div>   
+
+    </section>
+<!-- ##############Chemical End#################### -->
+
+
+<!-- ##############Activity log Start#################### -->
+
+    <section id="ActivityLog">
+      <div class="heading-apparatus shadow">
+        <h3>Adding Stock History</h3>
+  
+      </div>
+      <table class="table ml-4 mt-2" style="width: 800px;">
+        <thead class="tb-bg rounded text-white">
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Stock Added</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-addingStock-item">
+          <tr>
+            <td align="center" colspan="4">Loading Records...</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="button-cover">
+        <div class="pageButtons"> 
+          <span onclick="stockHisPrev()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            Back
+          </span>
+          <p class="pageNumber_stockHistory">1</p>
+          <span onclick="stockHisNext()">
+            Next<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </span>
+        </div>
+      </div>
+
+    </section>
+<!-- ##############Activity log End#################### -->
+
+
+
+
+
+<!-- ##############Trans History Start#################### -->
+
+<section id="TransHistory">
+
+  <div class="heading-apparatus shadow">
+    <h3>Transaction History</h3>
+
+  </div>
+  <table class="table ml-4 mt-2" style="width: 800px;">
+    <thead class="tb-bg rounded text-white">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Student No.</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Date Borrowed</th>
+        <th scope="col">Returned Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody class="tbody-transHistory-item">
+      <tr>
+        <td align="center" colspan="9">Loading Records...</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="button-cover">
+    <div class="pageButtons"> 
+      <span onclick="transHisPrev()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        Back
+      </span>
+      <p class="transHis_pageNumber">0</p>
+      <span onclick="transHisNext()">
+        Next<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </span>
+    </div>    
+  </div>
+
+
+
+
+  <div class="modal-itemShow-bg">
+    <div class="itemShow-modal">
+      <div class="items"></div>
+      <button class="btn btn-danger mt-3" onclick="transHistoryModalListing()">
+        Close
+      </button>
+      <!-- <h4></h4> -->
+    </div>
+  </div>
+
+
+</section>
+<!-- ##############Trans History End#################### -->
+
+
+
+<!-- ##############critical Start#################### -->
+
+<section id="theCritical">
+  <div class="heading-apparatus shadow">
+    <h3>Critical Items</h3>
+
+  </div>
+  <table class="table ml-4 mt-2" style="width: 800px;">
+    <thead class="tb-bg rounded text-white">
+      <tr>
+        <th scope="col">Item Code</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody class="tbody-critical-item">
+      <tr>
+        <td align="center" colspan="9">Loading Records...</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <div class="button-cover">
+    <div class="pageButtons"> 
+      <span onclick="critPrev()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        Back
+      </span>
+      <p class="Crit_pageNumber">0</p>
+      <span onclick="critNext()">
+        Next<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(124, 124, 124)" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </span>
+    </div>
+  </div> -->
+
+
+</section>
+<!-- ##############critical End#################### -->
+
+
+
+
+<!-- ##############Due Date Start#################### -->
+
+<section id="DueDate">
+  <div class="heading-apparatus shadow">
+    <h3>Due Transaction</h3>
+
+  </div>
+  <table class="table ml-4 mt-2" style="width: 800px;">
+    <thead class="tb-bg rounded text-white">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Student #</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Date Barrowed</th>
+        <th scope="col">Return Date</th>
+      </tr>
+    </thead>
+    <tbody class="tbody-due-date">
+      <tr>
+        <td align="center" colspan="9">Loading Records...</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+<!-- ##############Due Date End#################### -->
+
+
+
+<!-- ##############Report Start#################### -->
+
+    <section id="report">
+      <div class="heading-apparatus shadow">
+        <h3>Monthly Reports</h3>
+      </div>
+
+
+      <div class="report-body">
+        <div>
+          <div class="dropdown">
+            <button class="dropbtn">Select Date</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div> 
+          <button 
+          class="btn btn-light print-button"
+          onClick="printTable()">
+            Print
+          </button>
+        </div>
+
+
+        <div class="search-report">
+          <img 
+          width="400"
+          src="../assets/search.png" alt="">
+          
+          <p>Choose a date</p>
+        </div>
+
+        <!-- start of tales of report -->
+        <div class="report-tables">
+          <h4 class="mt-5">Chemicals Report as of <span class="dateOfReport"></span></h4>
+          <table class="table " style="width: 800px;">
+            <thead class="rounded">
+              <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Current Stock</th>
+                <th scope="col">On Borrowed</th>
+                <th scope="col">Total Stock</th>
+              </tr>
+            </thead>
+            <tbody class="tbody-chemicals-reports">
+              <tr>
+                <th ></th>
+                <th ></th>
+                <td>Loading Records..</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+  
+  
+          <h4 class="mt-5">Apparatus Report as of <span class="dateOfReport"></span></h4>
+          <table class="table " style="width: 800px;">
+            <thead class="rounded">
+              <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Current Stock</th>
+                <th scope="col">On Borrowed</th>
+                <th scope="col">Total Stock</th>
+              </tr>
+            </thead>
+            <tbody class="tbody-appartus-reports">
+              <tr>
+                <th ></th>
+                <th ></th>
+                <td>Loading Records..</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+  
+          <h4 class="mt-5"> Transactions in month of <span class="dateOfReport"></span></h4>
+          <table class="table " style="width: 800px;">
+            <thead class="rounded">
+              <tr>
+                <th scope="col">Student #</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">section</th>
+                <th scope="col">Date Borrowed</th>
+                <th scope="col">Date Returned</th>
+                <th scope="col">Apparatus</th>
+                <th scope="col">Chemicals</th>
+              </tr>
+            </thead>
+            <tbody class="tbody-history-reports">
+              <tr>
+                <th ></th>
+                <th ></th>
+                <td>Loading Records..</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+      </div>
+
+    </section>
+<!-- ##############Report End#################### -->
+
+<section id="Settings">
+  <div class="heading-apparatus shadow">
+    <h3>Account Settings</h3>
+  </div>
+
+  <div class="settings-body">
+
+    <div class="card px-4 py-4">
+      <h5 class="card-title mb-5">Change Username</h5>
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-3 col-form-label">Username</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="changeUsername_Username" placeholder="Username">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+        <div class="col-sm-9">
+          <input type="password" class="form-control" id="changeUsername_Password" placeholder="Password">
+          <img class="eye" 
+          id="eye1"
+          onclick="showPassword('changeUsername_Password', 'eye1')"
+          src="../assets/icons/eye-closed.svg" alt="show">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button 
+          onclick="changeUsername()"
+          class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="card px-4 py-4 mt-5">
+        <h5 class="card-title mb-5">Change Password</h5>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-3 col-form-label">Old Password</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="oldPassword" placeholder="Old Password">
+            <img class="eye" 
+            id="eye2"
+            onclick="showPassword('oldPassword', 'eye2')"
+            src="../assets/icons/eye-closed.svg" alt="show">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-3 col-form-label">New Password</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+            <img class="eye" 
+            id="eye3"
+            onclick="showPassword('newPassword', 'eye3')"
+            src="../assets/icons/eye-closed.svg" alt="show">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-3 col-form-label">Confirm Password</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+            <img class="eye" 
+            id="eye4"
+            onclick="showPassword('confirmPassword', 'eye4')"
+            src="../assets/icons/eye-closed.svg" alt="show">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button 
+            onclick="changePassword()"
+            type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+
+</section>
+
+
+
+  </body>
+  <script src="../Controller/Index.js"></script>
+  <script src="../Controller/apparatus.js"></script>
+  <script src="../Controller/chemicals.js"></script>
+  <script src="../Controller/transaction.js"></script>
+  <script src="../Controller/Report.js"></script>
+  <!-- <script src="../Controller/notifications.js"></script> -->
+  <script src="../Controller/stockHistory.js"></script>
+  <script src="../Controller/transHistory.js"></script>
+  <script src="../Controller/critical.js"></script>
+  <script src="../Controller/duedate.js"></script>
+  <script src="../Controller/settings.js"></script>
+
+  <script src="../bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+</html>

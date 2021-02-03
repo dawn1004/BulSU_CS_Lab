@@ -1,0 +1,67 @@
+.bulsu-card{
+    margin: 50px;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.home-logos{
+    width: 80px;
+}
+
+.heading-bulsu{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.title-home{
+    text-align: center;
+}
+
+.btn_pen{
+    cursor: pointer;
+    fill: rgb(15, 194, 15);
+    
+}
+
+.btn_pen:hover{
+    fill: green;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 60px;
+  width: 60px;
+  background-size: 100%, 100%;
+  border-radius: 10px;
+  background: rgba(0, 128, 0, 0.246);
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 34px;
+  color: rgb(28, 31, 28);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 34px;
+  color: rgb(28, 31, 28);
+}
+
+
+.fade-carousel{
+    animation: animmm 0.5s ease-in-out forwards;
+}
+
+@keyframes animmm{
+    from {
+        opacity: 0;
+        transform: translateX(-50%)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
